@@ -1,4 +1,5 @@
 # mf_shell.js
+### It all starts with a shell
 
 There seems to be a need to have a certain lowest level toolkit that adds a few usual suspects shared across other frameworks of mine. In my effort to make my own collection of frameworks that will help me keep form writing the same code over and over again each time I start a new project, I was thinking that it might be good to start with something like this.
 
@@ -45,4 +46,28 @@ var obj = {
 d = _.d(0,0,obj.x,obj.y);
 
 _.l(d); // 25
+```
+
+### _.b(o1,o2)
+
+Bounding box
+
+```js
+var obj1 = {
+  x:0,
+  y:0,
+  w:32,
+  h:32
+},
+
+obj2 = {
+  x:16,
+  y:8,
+  w:32,
+  h:32
+};
+
+_.l(_.b(obj1,obj2)); // true
+obj2.x = 100;
+_.l(_.b(obj1,obj2)); // false
 ```
