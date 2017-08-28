@@ -19,7 +19,7 @@ var _ = {
     },
 
     // bounding box collision detection
-    b : function (a,b) {
+    b : function (a, b) {
 
         return !(
             ((a.y + a.h) < (b.y)) ||
@@ -34,6 +34,25 @@ var _ = {
 
         return document.getElementById(id);
 
+    },
+
+    // shallow clone of an object
+    c : function (obj) {
+
+        var n = {};
+
+        for (var prop in obj) {
+
+            if (typeof prop != 'object') {
+
+                n[prop] = obj[prop];
+
+            }
+
+        }
+
+        return n;
+
     }
 
-}
+};
