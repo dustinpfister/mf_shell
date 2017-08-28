@@ -34,6 +34,6 @@ var _ = {
 
         return document.getElementById(id);
 
-    };
+    }
 
 }
