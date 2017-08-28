@@ -71,3 +71,22 @@ _.l(_.b(obj1,obj2)); // true
 obj2.x = 100;
 _.l(_.b(obj1,obj2)); // false
 ```
+
+### _.c(obj)
+
+Shallow copy (root primitives only) an object.
+
+```js
+var obj = {
+
+  x: 15,
+  y: 33
+
+};
+
+var clone = _.c(obj);
+clone.x = 20;
+
+console.log(obj.x + ',' + obj.y); // 15,33
+console.log(clone.x + ',' + obj.y); // 20,33
+```
