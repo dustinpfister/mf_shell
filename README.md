@@ -19,6 +19,24 @@ wrap of console.log
 _.l('foo'); // '_.l: foo' logged to the console
 ```
 
+### _.lo(m,r)
+
+log once, set r to true to reset
+
+```js
+ 
+var loop = function(){
+ 
+   setTimeout(loop,1000);
+   
+   _.l('every tick');
+   _.lo('just once');
+ 
+};
+ 
+loop();
+```
+
 ### _.g(id);
 
 wrap of document.getElementById
@@ -89,4 +107,57 @@ clone.x = 20;
 
 console.log(obj.x + ',' + obj.y); // 15,33
 console.log(clone.x + ',' + obj.y); // 20,33
+```
+
+### _.as
+
+Get or set the Angle Scale property.
+
+```js
+if (_.as === 360) {
+ 
+  _.l(_.as(45));
+ 
+} else {
+ 
+  _.l(_.as / 360 * 45);
+ 
+}
+```
+
+### _.m(x,m)
+
+Mathematical Modulo method.
+
+```js
+_.l(-13 % 6); // -1
+_.l(_.m(-13, 6)); // 5
+```
+
+### _.an(a)
+
+Angle Normalize, Normalize and angle to 0 to PI * 2 (or 0 to 360 depending on _.as)
+
+```js
+_.l(_.an(-Math.PI * 8.5)); // 4.71
+```
+
+### _.anh(a)
+
+
+Angle Normalize Half, normalize and angle to -Pi to PI (or -180 to 180 depending on _.as)
+
+```js
+_.l(_.anh(-Math.PI * 8.5)); // -1.57
+```
+
+### _.asd(f,t)
+
+Angle Shortest Distance. Give from, and To angles and receive a 1 for clockwise, and -1 for counter clockwise. Useful for finding the quickest direction with angular movement.
+
+```js
+_.l(_.asd(0, -1)); // -1 (counter clockwsie)
+_.l(_.asd(0, 1)); // 1 (clockwsie)
+_.l(_.asd(3.14, 1.57)); // -1 (counter clockwsie)
+_.l(_.asd(3.14, 4)); // 1 (clockwsie)
 ```
