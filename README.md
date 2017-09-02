@@ -50,6 +50,15 @@ _.g('foo').addEventListener('click', function(e){
 });
 ```
 
+### _.r(n1,n2)
+
+random number wrap
+
+```js
+_.l(_.r(100));  // random number bnetween 0 and 100
+_.l(_.r(128,255)); // randm number between 128 and 255
+```
+
 ### _.d(x1,y1,x2,y2)
 
 Yes this is the 2d distance formula.
@@ -134,7 +143,7 @@ _.l(-13 % 6); // -1
 _.l(_.m(-13, 6)); // 5
 ```
 
-## _.tau
+### _.tau
 
 PI * 2
 

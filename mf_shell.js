@@ -16,6 +16,22 @@ var _ = (function () {
     // public api
     return {
 
+        // random number wrap
+        r : function (l, h) {
+
+            l = l || 1;
+
+            if (h === undefined) {
+
+                return Math.random() * l;
+
+            }
+
+            //return Math.random() * (h - l) + l;
+            return this.r(h - l) + l;
+
+        },
+
         // why mathematical modulo?
         // http://javascript.about.com/od/problemsolving/a/modulobug.htm
         // https://stackoverflow.com/questions/4467539/javascript-modulo-not-behaving
