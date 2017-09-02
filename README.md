@@ -92,7 +92,7 @@ _.l(_.b(obj1,obj2)); // false
 
 ### _.c(obj)
 
-Shallow copy (root primitives only) an object.
+Shallow copy (root primitives only) of an object.
 
 ```js
 var obj = {
@@ -132,6 +132,14 @@ Mathematical Modulo method.
 ```js
 _.l(-13 % 6); // -1
 _.l(_.m(-13, 6)); // 5
+```
+
+## _.tau
+
+PI * 2
+
+```js
+_.l(_.tau); // 6.28...
 ```
 
 ### _.an(a)

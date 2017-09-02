@@ -25,6 +25,8 @@ var _ = (function () {
 
         },
 
+        tau : tau,
+
         // angel scale: set scale when working with angles (pi*2 or 360)
         as : tau,
 
