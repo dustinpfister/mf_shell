@@ -178,3 +178,13 @@ _.l(_.asd(0, 1)); // 1 (clockwsie)
 _.l(_.asd(3.14, 1.57)); // -1 (counter clockwsie)
 _.l(_.asd(3.14, 4)); // 1 (clockwsie)
 ```
+
+### _.ad(a,b);
+
+Angle Distance returns the shortest angular distance between two given angles.
+
+```js
+_.l(_.ad(1,6)); // 1.28
+_.l(_.ad(0,2)); // 2
+_.l(_.ad(0,Math.PI*2-2)); // 2
+```
