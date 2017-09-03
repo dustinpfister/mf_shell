@@ -73,6 +73,21 @@ var _ = (function () {
             return this.m(n + h, this.as) - h;
         },
 
+        // angle distance
+        ad : function (a, b) {
+
+            var h = this.as / 2,
+            diff = this.anh(a - b);
+
+            if (diff > h) {
+
+                diff = diff - this.as;
+
+            }
+            return Math.abs(diff);
+
+        },
+
         // console.log wrap
         l : function (m) {
 
