@@ -41,6 +41,8 @@ var _ = (function () {
 
         },
 
+        // PI and tau
+        pi : Math.PI,
         tau : tau,
 
         // angel scale: set scale when working with angles (pi*2 or 360)
