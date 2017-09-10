@@ -125,7 +125,7 @@ Get or set the Angle Scale property.
 ```js
 if (_.as === 360) {
  
-  _.l(_.as(45));
+  _.l(45);
  
 } else {
  
